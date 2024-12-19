@@ -1,3 +1,5 @@
+var crUser = "Lawnmower Man";
+var crPassword = "7.3942";
 
 function setup() {
     let buttons = document.getElementById("buttons");
@@ -14,5 +16,15 @@ function checkPassword() {
     let dialogs = document.getElementById("dialogs");
     let userName = dialogs.querySelector(':nth-child(2)').value;
     let password = dialogs.querySelector(':nth-child(4)').value;
-    alert(userName);
+    if (crUser == userName && crPassword == password) {
+        let box = document.getElementsByClassName("box");
+        box[0].remove();
+        let body = document.getElementsByTagName("body");
+        document.getElementsByTagName("body").style.backgroundImage = "url('http://i.imgur.com/IUVDNyp.jpg')";
+    }
+    else {
+        document.getElementsByTagName("body").style.backgroundColor = "red";
+    }
+
+    
 }
